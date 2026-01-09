@@ -80,10 +80,10 @@ const Dashboard = () => {
         display: false
       },
       tooltip: {
-        backgroundColor: 'rgba(30, 30, 50, 0.9)',
+        backgroundColor: '#1e293b',
         titleColor: '#fff',
-        bodyColor: '#a0a0b0',
-        borderColor: 'rgba(255, 255, 255, 0.1)',
+        bodyColor: '#e2e8f0',
+        borderColor: '#334155',
         borderWidth: 1,
         padding: 12,
         cornerRadius: 8
@@ -92,18 +92,18 @@ const Dashboard = () => {
     scales: {
       x: {
         grid: {
-          color: 'rgba(255, 255, 255, 0.05)'
+          color: '#e2e8f0'
         },
         ticks: {
-          color: '#6b6b80'
+          color: '#64748b'
         }
       },
       y: {
         grid: {
-          color: 'rgba(255, 255, 255, 0.05)'
+          color: '#e2e8f0'
         },
         ticks: {
-          color: '#6b6b80'
+          color: '#64748b'
         },
         beginAtZero: true
       }
@@ -122,7 +122,8 @@ const Dashboard = () => {
           '#f59e0b',
           '#8b5cf6'
         ],
-        borderWidth: 0,
+        borderWidth: 2,
+        borderColor: '#ffffff',
         hoverOffset: 8
       }
     ]
@@ -135,7 +136,7 @@ const Dashboard = () => {
       legend: {
         position: 'bottom',
         labels: {
-          color: '#a0a0b0',
+          color: '#64748b',
           padding: 20,
           usePointStyle: true,
           font: {

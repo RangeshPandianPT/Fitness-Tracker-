@@ -8,11 +8,20 @@ const Navbar = () => {
 
   const isActive = (path) => location.pathname === path;
 
+  const getInitials = (name) => {
+    return name
+      ?.split(' ')
+      .map(n => n[0])
+      .join('')
+      .toUpperCase()
+      .slice(0, 2) || 'U';
+  };
+
   return (
     <nav className="navbar">
       <div className="navbar-container">
         <Link to="/" className="navbar-brand">
-          <FiActivity size={24} />
+          <FiActivity size={22} />
           FitTracker
         </Link>
 
@@ -32,10 +41,17 @@ const Navbar = () => {
             Workouts
           </Link>
           
-          <div className="nav-link" style={{ cursor: 'default' }}>
-            <FiUser size={18} />
-            {user?.name}
-          </div>
+          <Link
+            to="/profile"
+            className={`nav-profile ${isActive('/profile') ? 'active' : ''}`}
+          >
+            <div className="nav-avatar">
+              {getInitials(user?.name)}
+            </div>
+            <span style={{ fontSize: '0.875rem', fontWeight: 500, color: isActive('/profile') ? '#4f46e5' : '#64748b' }}>
+              {user?.name?.split(' ')[0]}
+            </span>
+          </Link>
           
           <button onClick={logout} className="btn btn-secondary" style={{ marginLeft: '0.5rem' }}>
             <FiLogOut size={16} />

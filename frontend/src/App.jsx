@@ -6,6 +6,7 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import Dashboard from './pages/Dashboard';
 import Workouts from './pages/Workouts';
+import Profile from './pages/Profile';
 import './index.css';
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
                       <Route path="/" element={<Dashboard />} />
                       <Route path="/dashboard" element={<Dashboard />} />
                       <Route path="/workouts" element={<Workouts />} />
+                      <Route path="/profile" element={<Profile />} />
                     </Routes>
                   </main>
                 </div>
